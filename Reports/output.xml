@@ -1,0 +1,4008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170110 15:10:20.572" generator="Robot 3.0 (Python 2.7.12 on linux2)">
+<suite source="/home/guccha/robot_automation/BGP_Casestudy/BGP.robot" id="s1" name="BGP">
+<kw type="setup" name="Setup Actions" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Setup Actions done here</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:10:20.604" starttime="20170110 15:10:20.604"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>connect_all</arg>
+<arg>enable</arg>
+</arguments>
+<kw name="Connect All" library="setup_actions">
+<arguments>
+<arg>enable</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:12:51.832" starttime="20170110 15:10:20.604"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:12:51.832" starttime="20170110 15:10:20.604"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:12:51.832" starttime="20170110 15:10:20.604"></status>
+</kw>
+<test id="s1-t1" name="Initiation_Phase">
+<kw name="Configure IP addresses as per the topology" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Configuring IP_Address</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:12:51.834" starttime="20170110 15:12:51.834"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:12:51.834" starttime="20170110 15:12:51.833"></status>
+</kw>
+<kw name="Configure ip address" library="Resource">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R1</arg>
+<arg>${Links_of_R1}</arg>
+<arg>configure</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R1</arg>
+<arg>${Links_of_R1}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20170110 15:15:17.403" level="INFO">flag=3
+Connection established with R1
+flag=1
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#interface f0/0
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#ip address 192.168.23.3  255.255.255.0 
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#no shutdown
+Device1(config-if)#no shutdown 
+Device1(config-if)#no shutdown 
+Device1(config-if)#no shutdown 
+Device1(config-if)#no shutdown 
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#interface f0/1
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#ip address 192.168.34.3  255.255.255.0 
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#no shutdown
+Device1(config-if)#no shutdown 
+Device1(config-if)#no shutdown 
+Device1(config-if)#no shutdown 
+Device1(config-if)#no shutdown 
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#</msg>
+<status status="PASS" endtime="20170110 15:15:17.403" starttime="20170110 15:12:51.835"></status>
+</kw>
+<msg timestamp="20170110 15:15:17.403" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:15:17.403" starttime="20170110 15:12:51.835"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring IP Address on R1 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:15:17.404" starttime="20170110 15:15:17.404"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address configured in R1</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:15:17.405" starttime="20170110 15:15:17.405"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R2</arg>
+<arg>${Links_of_R2}</arg>
+<arg>configure</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R2</arg>
+<arg>${Links_of_R2}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20170110 15:17:43.311" level="INFO">flag=3
+Connection established with R2
+flag=1
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#interface f0/0
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#ip address 192.168.23.2  255.255.255.0 
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#no shutdown
+Device2(config-if)#no shutdown 
+Device2(config-if)#no shutdown 
+Device2(config-if)#no shutdown 
+Device2(config-if)#no shutdown 
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#interface f0/1
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#ip address 192.168.12.2  255.255.255.0 
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#no shutdown
+Device2(config-if)#no shutdown 
+Device2(config-if)#no shutdown 
+Device2(config-if)#no shutdown 
+Device2(config-if)#no shutdown 
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#</msg>
+<status status="PASS" endtime="20170110 15:17:43.311" starttime="20170110 15:15:17.405"></status>
+</kw>
+<msg timestamp="20170110 15:17:43.312" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:17:43.312" starttime="20170110 15:15:17.405"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring IP Address on R2 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:17:43.314" starttime="20170110 15:17:43.312"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address configured in R2</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:17:43.314" starttime="20170110 15:17:43.314"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R3</arg>
+<arg>${Links_of_R3}</arg>
+<arg>configure</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R3</arg>
+<arg>${Links_of_R3}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20170110 15:20:08.878" level="INFO">flag=3
+Connection established with R3
+flag=1
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#interface f0/1
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#ip address 192.168.34.4  255.255.255.0 
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#no shutdown
+Device3(config-if)#no shutdown 
+Device3(config-if)#no shutdown 
+Device3(config-if)#no shutdown 
+Device3(config-if)#no shutdown 
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#interface f0/0
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#ip address 192.168.45.4  255.255.255.0 
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#no shutdown
+Device3(config-if)#no shutdown 
+Device3(config-if)#no shutdown 
+Device3(config-if)#no shutdown 
+Device3(config-if)#no shutdown 
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#</msg>
+<status status="PASS" endtime="20170110 15:20:08.879" starttime="20170110 15:17:43.314"></status>
+</kw>
+<msg timestamp="20170110 15:20:08.879" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:20:08.879" starttime="20170110 15:17:43.314"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring IP Address on R3 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:20:08.881" starttime="20170110 15:20:08.880"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address configured in R3</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:20:08.882" starttime="20170110 15:20:08.882"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R4</arg>
+<arg>${Links_of_R4}</arg>
+<arg>configure</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R4</arg>
+<arg>${Links_of_R4}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20170110 15:21:25.741" level="INFO">flag=3
+Connection established with R4
+flag=1
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#interface f0/0
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#ip address 192.168.12.1  255.255.255.0 
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#no shutdown
+Device4(config-if)#no shutdown 
+Device4(config-if)#no shutdown 
+Device4(config-if)#no shutdown 
+Device4(config-if)#no shutdown 
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#</msg>
+<status status="PASS" endtime="20170110 15:21:25.741" starttime="20170110 15:20:08.883"></status>
+</kw>
+<msg timestamp="20170110 15:21:25.742" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:21:25.742" starttime="20170110 15:20:08.882"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring IP Address on R4 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:21:25.743" starttime="20170110 15:21:25.742"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address configured in R4</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:21:25.744" starttime="20170110 15:21:25.744"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R5</arg>
+<arg>${Links_of_R5}</arg>
+<arg>configure</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R5</arg>
+<arg>${Links_of_R5}</arg>
+<arg>configure</arg>
+</arguments>
+<msg timestamp="20170110 15:22:42.617" level="INFO">flag=3
+Connection established with R5
+flag=1
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#interface f0/0
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#ip address 192.168.45.5  255.255.255.0 
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#no shutdown
+Device5(config-if)#no shutdown 
+Device5(config-if)#no shutdown 
+Device5(config-if)#no shutdown 
+Device5(config-if)#no shutdown 
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#</msg>
+<status status="PASS" endtime="20170110 15:22:42.617" starttime="20170110 15:21:25.744"></status>
+</kw>
+<msg timestamp="20170110 15:22:42.617" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:22:42.617" starttime="20170110 15:21:25.744"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring IP Address on R5 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:22:42.619" starttime="20170110 15:22:42.618"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address configured in R5</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:22:42.619" starttime="20170110 15:22:42.619"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:22:42.619" starttime="20170110 15:12:51.834"></status>
+</kw>
+<kw name="Set loopback interface" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Setting Loopback interface</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:22:42.620" starttime="20170110 15:22:42.620"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_loopback</arg>
+<arg>R1</arg>
+<arg>set</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set Loopback" library="Devices">
+<arguments>
+<arg>R1</arg>
+<arg>set</arg>
+</arguments>
+<msg timestamp="20170110 15:24:00.155" level="INFO">flag=3
+Connection established with R1
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#interface loopback0
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#ip address 3.3.3.3  255.255.255.255 
+Device1(config-if)#ip address 3.3.3.3  255.255.255.255 
+Device1(config-if)#ip address 3.3.3.3  255.255.255.255 
+Device1(config-if)#ip address 3.3.3.3  255.255.255.255 
+Device1(config-if)#ip address 3.3.3.3  255.255.255.255 
+Device1(config-if)#ip address 3.3.3.3  255.255.255.255 
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#end
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#</msg>
+<status status="PASS" endtime="20170110 15:24:00.155" starttime="20170110 15:22:42.621"></status>
+</kw>
+<msg timestamp="20170110 15:24:00.155" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:24:00.155" starttime="20170110 15:22:42.620"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring Loopback IP on R1 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:24:00.156" starttime="20170110 15:24:00.155"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Loopback_Address configured in R1</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:24:00.156" starttime="20170110 15:24:00.156"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_loopback</arg>
+<arg>R2</arg>
+<arg>set</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set Loopback" library="Devices">
+<arguments>
+<arg>R2</arg>
+<arg>set</arg>
+</arguments>
+<msg timestamp="20170110 15:25:16.854" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#interface loopback0
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#ip address 2.2.2.2  255.255.255.255 
+Device2(config-if)#ip address 2.2.2.2  255.255.255.255 
+Device2(config-if)#ip address 2.2.2.2  255.255.255.255 
+Device2(config-if)#ip address 2.2.2.2  255.255.255.255 
+Device2(config-if)#ip address 2.2.2.2  255.255.255.255 
+Device2(config-if)#ip address 2.2.2.2  255.255.255.255 
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#end
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#</msg>
+<status status="PASS" endtime="20170110 15:25:16.854" starttime="20170110 15:24:00.157"></status>
+</kw>
+<msg timestamp="20170110 15:25:16.855" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:25:16.855" starttime="20170110 15:24:00.157"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring Loopback IP on R2 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:25:16.856" starttime="20170110 15:25:16.855"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Loopback_Address configured in R2</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:25:16.856" starttime="20170110 15:25:16.856"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_loopback</arg>
+<arg>R3</arg>
+<arg>set</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set Loopback" library="Devices">
+<arguments>
+<arg>R3</arg>
+<arg>set</arg>
+</arguments>
+<msg timestamp="20170110 15:26:33.542" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#interface loopback0
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#ip address 4.4.4.4  255.255.255.255 
+Device3(config-if)#ip address 4.4.4.4  255.255.255.255 
+Device3(config-if)#ip address 4.4.4.4  255.255.255.255 
+Device3(config-if)#ip address 4.4.4.4  255.255.255.255 
+Device3(config-if)#ip address 4.4.4.4  255.255.255.255 
+Device3(config-if)#ip address 4.4.4.4  255.255.255.255 
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#end
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#</msg>
+<status status="PASS" endtime="20170110 15:26:33.542" starttime="20170110 15:25:16.857"></status>
+</kw>
+<msg timestamp="20170110 15:26:33.542" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:26:33.542" starttime="20170110 15:25:16.857"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring Loopback IP on R3 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:26:33.543" starttime="20170110 15:26:33.542"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Loopback_Address configured in R3</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:26:33.544" starttime="20170110 15:26:33.543"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_loopback</arg>
+<arg>R4</arg>
+<arg>set</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set Loopback" library="Devices">
+<arguments>
+<arg>R4</arg>
+<arg>set</arg>
+</arguments>
+<msg timestamp="20170110 15:27:50.241" level="INFO">flag=3
+Connection established with R4
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#interface loopback0
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#ip address 1.1.1.1  255.255.255.255 
+Device4(config-if)#ip address 1.1.1.1  255.255.255.255 
+Device4(config-if)#ip address 1.1.1.1  255.255.255.255 
+Device4(config-if)#ip address 1.1.1.1  255.255.255.255 
+Device4(config-if)#ip address 1.1.1.1  255.255.255.255 
+Device4(config-if)#ip address 1.1.1.1  255.255.255.255 
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#end
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#</msg>
+<status status="PASS" endtime="20170110 15:27:50.241" starttime="20170110 15:26:33.544"></status>
+</kw>
+<msg timestamp="20170110 15:27:50.241" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:27:50.241" starttime="20170110 15:26:33.544"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring Loopback IP on R4 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:27:50.242" starttime="20170110 15:27:50.242"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Loopback_Address configured in R4</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:27:50.243" starttime="20170110 15:27:50.242"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_loopback</arg>
+<arg>R5</arg>
+<arg>set</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Set Loopback" library="Devices">
+<arguments>
+<arg>R5</arg>
+<arg>set</arg>
+</arguments>
+<msg timestamp="20170110 15:29:06.969" level="INFO">flag=3
+Connection established with R5
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#interface loopback0
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#ip address 5.5.5.5  255.255.255.255 
+Device5(config-if)#ip address 5.5.5.5  255.255.255.255 
+Device5(config-if)#ip address 5.5.5.5  255.255.255.255 
+Device5(config-if)#ip address 5.5.5.5  255.255.255.255 
+Device5(config-if)#ip address 5.5.5.5  255.255.255.255 
+Device5(config-if)#ip address 5.5.5.5  255.255.255.255 
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#end
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#</msg>
+<status status="PASS" endtime="20170110 15:29:06.969" starttime="20170110 15:27:50.243"></status>
+</kw>
+<msg timestamp="20170110 15:29:06.969" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:29:06.969" starttime="20170110 15:27:50.243"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring Loopback IP on R5 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:29:06.971" starttime="20170110 15:29:06.969"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Loopback_Address configured in R5</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:29:06.972" starttime="20170110 15:29:06.971"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:29:06.972" starttime="20170110 15:22:42.620"></status>
+</kw>
+<kw name="Configure OSPF within AS2 to advertise the connected networks" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Configuring OSPF</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:29:06.973" starttime="20170110 15:29:06.973"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:29:06.973" starttime="20170110 15:29:06.972"></status>
+</kw>
+<kw name="Enable OSPF in devices present in AS2 and set the ospf neighbors" library="Resource">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_ospf</arg>
+<arg>R1</arg>
+<arg>${Process_id}</arg>
+<arg>${Networks_connected_to_R1}</arg>
+<arg>${Area1}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure Ospf" library="OSPF">
+<arguments>
+<arg>R1</arg>
+<arg>${Process_id}</arg>
+<arg>${Networks_connected_to_R1}</arg>
+<arg>${Area1}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:32:42.439" level="INFO">flag=3
+Connection established with R1
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#router ospf 1
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#network 192.168.23.0  0.0.0.255 area 0 
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#router ospf 1
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#network 192.168.34.0  0.0.0.255 area 0 
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#router ospf 1
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#network 3.3.3.0  0.0.0.255 area 0 
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#
+Device1(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:32:42.439" starttime="20170110 15:29:06.975"></status>
+</kw>
+<msg timestamp="20170110 15:32:42.440" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:32:42.440" starttime="20170110 15:29:06.974"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ospf on R1 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:32:42.442" starttime="20170110 15:32:42.440"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>OSPF configured in R1</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:32:42.443" starttime="20170110 15:32:42.442"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_ospf</arg>
+<arg>R2</arg>
+<arg>${Process_id}</arg>
+<arg>${Networks_connected_to_R2}</arg>
+<arg>${Area1}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure Ospf" library="OSPF">
+<arguments>
+<arg>R2</arg>
+<arg>${Process_id}</arg>
+<arg>${Networks_connected_to_R2}</arg>
+<arg>${Area1}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:35:11.142" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#router ospf 1
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#network 192.168.23.0  0.0.0.255 area 0 
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#router ospf 1
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#network 2.2.2.0  0.0.0.255 area 0 
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:35:11.143" starttime="20170110 15:32:42.443"></status>
+</kw>
+<msg timestamp="20170110 15:35:11.143" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:35:11.143" starttime="20170110 15:32:42.443"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ospf on R2 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:35:11.144" starttime="20170110 15:35:11.143"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>OSPF configured in R2</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:35:11.145" starttime="20170110 15:35:11.144"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_ospf</arg>
+<arg>R3</arg>
+<arg>${Process_id}</arg>
+<arg>${Networks_connected_to_R3}</arg>
+<arg>${Area1}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure Ospf" library="OSPF">
+<arguments>
+<arg>R3</arg>
+<arg>${Process_id}</arg>
+<arg>${Networks_connected_to_R3}</arg>
+<arg>${Area1}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:37:42.563" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#router ospf 1
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#network 192.168.34.0  0.0.0.255 area 0 
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#router ospf 1
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#network 4.4.4.0  0.0.0.255 area 0 
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:37:42.563" starttime="20170110 15:35:11.145"></status>
+</kw>
+<msg timestamp="20170110 15:37:42.563" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:37:42.563" starttime="20170110 15:35:11.145"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ospf on R3 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:37:42.565" starttime="20170110 15:37:42.564"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>OSPF configured in R3</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:37:42.565" starttime="20170110 15:37:42.565"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:37:42.566" starttime="20170110 15:29:06.974"></status>
+</kw>
+<kw name="Configure IBGP and source the BGP updates from the loopback0 interfaces" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Setting IBGP between R2 and R3</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:37:42.566" starttime="20170110 15:37:42.566"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:37:42.566" starttime="20170110 15:37:42.566"></status>
+</kw>
+<kw name="Enable IBGP and advertise the updates from the loopback interface" library="Resource">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_IBGP</arg>
+<arg>R2</arg>
+<arg>${AS_id}</arg>
+<arg>${R3_interface}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure IBGP" library="IBGP">
+<arguments>
+<arg>R2</arg>
+<arg>${AS_id}</arg>
+<arg>${R3_interface}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:39:04.214" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#router bgp 2
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#neighbor 4.4.4.4 remote-as 2
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#neighbor 4.4.4.4 update-source loopback 0
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:39:04.214" starttime="20170110 15:37:42.567"></status>
+</kw>
+<msg timestamp="20170110 15:39:04.214" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:39:04.214" starttime="20170110 15:37:42.567"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ibgp on R2 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:39:04.216" starttime="20170110 15:39:04.215"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IBGP configured in R2</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:39:04.216" starttime="20170110 15:39:04.216"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_IBGP</arg>
+<arg>R3</arg>
+<arg>${AS_id}</arg>
+<arg>${R2_interface}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure IBGP" library="IBGP">
+<arguments>
+<arg>R3</arg>
+<arg>${AS_id}</arg>
+<arg>${R2_interface}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:40:26.470" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#router bgp 2
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#neighbor 2.2.2.2 remote-as 2
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#neighbor 2.2.2.2 update-source loopback 0
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:40:26.470" starttime="20170110 15:39:04.216"></status>
+</kw>
+<msg timestamp="20170110 15:40:26.470" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:40:26.470" starttime="20170110 15:39:04.216"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ibgp on R3 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:40:26.471" starttime="20170110 15:40:26.470"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IBGP configured in R3</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:40:26.472" starttime="20170110 15:40:26.471"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:40:26.472" starttime="20170110 15:37:42.566"></status>
+</kw>
+<kw name="Enable BGP Synchronisation" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Enabling BGP synchronization</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:40:26.472" starttime="20170110 15:40:26.472"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:40:26.472" starttime="20170110 15:40:26.472"></status>
+</kw>
+<kw name="Enable synchronisation between border routers" library="Resource">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>enable_syn</arg>
+<arg>R2</arg>
+<arg>${AS_id}</arg>
+</arguments>
+<kw name="Enable Syn" library="IBGP">
+<arguments>
+<arg>R2</arg>
+<arg>${AS_id}</arg>
+</arguments>
+<msg timestamp="20170110 15:42:49.099" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#router bgp 2
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#synchronization
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#end
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+*Mar  1 00:33:33.007: %SYS-5-CONFIG_I: Configured from console by console
+Device2#</msg>
+<status status="PASS" endtime="20170110 15:42:49.100" starttime="20170110 15:40:26.473"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:42:49.100" starttime="20170110 15:40:26.472"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>enable_syn</arg>
+<arg>R3</arg>
+<arg>${AS_id}</arg>
+</arguments>
+<kw name="Enable Syn" library="IBGP">
+<arguments>
+<arg>R3</arg>
+<arg>${AS_id}</arg>
+</arguments>
+<msg timestamp="20170110 15:45:09.675" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#router bgp 2
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#synchronization
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#end
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+*Mar  1 00:35:54.131: %SYS-5-CONFIG_I: Configured from console by console
+Device3#</msg>
+<status status="PASS" endtime="20170110 15:45:09.676" starttime="20170110 15:42:49.102"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:45:09.676" starttime="20170110 15:42:49.101"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:45:09.677" starttime="20170110 15:40:26.472"></status>
+</kw>
+<kw name="Configure EBGP and source the BGP updates from the loopback0 interfaces" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Configuring EBGP between devices in different autonomous systems</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:45:09.679" starttime="20170110 15:45:09.679"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:45:09.680" starttime="20170110 15:45:09.677"></status>
+</kw>
+<kw name="Enable BGP and advertise networks connected outside the autonomous system" library="Resource">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_EBGP</arg>
+<arg>R2</arg>
+<arg>${R2_AS_id}</arg>
+<arg>${R2_einterface}</arg>
+<arg>${R2_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure EBGP" library="IBGP">
+<arguments>
+<arg>R2</arg>
+<arg>${R2_AS_id}</arg>
+<arg>${R2_einterface}</arg>
+<arg>${R2_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:46:30.964" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#router bgp 2
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#neighbor 192.168.12.1 remote-as 1
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:46:30.964" starttime="20170110 15:45:09.682"></status>
+</kw>
+<msg timestamp="20170110 15:46:30.965" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:46:30.965" starttime="20170110 15:45:09.681"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ebgp on R2 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:46:30.970" starttime="20170110 15:46:30.966"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>EBGP configured in R2</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:46:30.972" starttime="20170110 15:46:30.971"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_EBGP</arg>
+<arg>R4</arg>
+<arg>${R4_AS_id}</arg>
+<arg>${R4_einterface}</arg>
+<arg>${R4_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure EBGP" library="IBGP">
+<arguments>
+<arg>R4</arg>
+<arg>${R4_AS_id}</arg>
+<arg>${R4_einterface}</arg>
+<arg>${R4_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:47:52.344" level="INFO">flag=3
+Connection established with R4
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#router bgp 1
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#neighbor 192.168.12.2 remote-as 2
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:47:52.345" starttime="20170110 15:46:30.974"></status>
+</kw>
+<msg timestamp="20170110 15:47:52.345" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:47:52.345" starttime="20170110 15:46:30.973"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ebgp on R4 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:47:52.349" starttime="20170110 15:47:52.346"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>EBGP configured in R4</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:47:52.350" starttime="20170110 15:47:52.349"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_EBGP</arg>
+<arg>R3</arg>
+<arg>${R3_AS_id}</arg>
+<arg>${R3_einterface}</arg>
+<arg>${R3_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure EBGP" library="IBGP">
+<arguments>
+<arg>R3</arg>
+<arg>${R3_AS_id}</arg>
+<arg>${R3_einterface}</arg>
+<arg>${R3_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:49:13.666" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#router bgp 2
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#neighbor 192.168.45.5 remote-as 3
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:49:13.667" starttime="20170110 15:47:52.351"></status>
+</kw>
+<msg timestamp="20170110 15:49:13.668" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:49:13.668" starttime="20170110 15:47:52.350"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ebgp on R3 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:49:13.673" starttime="20170110 15:49:13.669"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>EBGP configured in R3</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:49:13.674" starttime="20170110 15:49:13.674"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Configure_EBGP</arg>
+<arg>R5</arg>
+<arg>${R5_AS_id}</arg>
+<arg>${R5_einterface}</arg>
+<arg>${R5_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Configure EBGP" library="IBGP">
+<arguments>
+<arg>R5</arg>
+<arg>${R5_AS_id}</arg>
+<arg>${R5_einterface}</arg>
+<arg>${R5_neighbor_AS_id}</arg>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170110 15:50:35.056" level="INFO">flag=3
+Connection established with R5
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#router bgp 3
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#neighbor 192.168.45.4 remote-as 2
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#</msg>
+<status status="PASS" endtime="20170110 15:50:35.058" starttime="20170110 15:49:13.676"></status>
+</kw>
+<msg timestamp="20170110 15:50:35.058" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 15:50:35.058" starttime="20170110 15:49:13.675"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>Configuring ebgp on R5 has failed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:50:35.063" starttime="20170110 15:50:35.059"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>EBGP configured in R5</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:50:35.064" starttime="20170110 15:50:35.063"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:50:35.064" starttime="20170110 15:45:09.680"></status>
+</kw>
+<kw name="Advertise loopback interface on AS1 and AS3" library="Resource">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>advertising_loopback</arg>
+<arg>R4</arg>
+<arg>${R4_AS_id}</arg>
+<arg>${R4_interface}</arg>
+<arg>${R4_mask}</arg>
+</arguments>
+<kw name="Advertising Loopback" library="IBGP">
+<arguments>
+<arg>R4</arg>
+<arg>${R4_AS_id}</arg>
+<arg>${R4_interface}</arg>
+<arg>${R4_mask}</arg>
+</arguments>
+<msg timestamp="20170110 15:52:55.650" level="INFO">flag=3
+Connection established with R4
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#router bgp 1
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#network 1.1.1.0 mask 255.255.255.0
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#
+Device4(config-router)#end
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+*Mar  1 00:42:49.323: %SYS-5-CONFIG_I: Configured from console by console
+Device4#</msg>
+<status status="PASS" endtime="20170110 15:52:55.651" starttime="20170110 15:50:35.067"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:52:55.652" starttime="20170110 15:50:35.066"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>advertising_loopback</arg>
+<arg>R5</arg>
+<arg>${R5_AS_id}</arg>
+<arg>${R5_interface}</arg>
+<arg>${R5_mask}</arg>
+</arguments>
+<kw name="Advertising Loopback" library="IBGP">
+<arguments>
+<arg>R5</arg>
+<arg>${R5_AS_id}</arg>
+<arg>${R5_interface}</arg>
+<arg>${R5_mask}</arg>
+</arguments>
+<msg timestamp="20170110 15:55:16.216" level="INFO">flag=3
+Connection established with R5
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#router bgp 3
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#network 5.5.5.0 mask 255.255.255.0
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#
+Device5(config-router)#end
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+*Mar  1 00:44:59.663: %SYS-5-CONFIG_I: Configured from console by console
+Device5#</msg>
+<status status="PASS" endtime="20170110 15:55:16.217" starttime="20170110 15:52:55.653"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:55:16.217" starttime="20170110 15:52:55.652"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:55:16.217" starttime="20170110 15:50:35.065"></status>
+</kw>
+<kw name="Establish route between R2 and R3" library="Resource">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>route</arg>
+<arg>R2</arg>
+<arg>${R2_AS_id}</arg>
+<arg>${R3_lointerface}</arg>
+</arguments>
+<kw name="Route" library="IBGP">
+<arguments>
+<arg>R2</arg>
+<arg>${R2_AS_id}</arg>
+<arg>${R3_lointerface}</arg>
+</arguments>
+<msg timestamp="20170110 15:57:36.753" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#router bgp 2
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#neighbor 4.4.4.4 next-hop-self
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#end
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+*Mar  1 00:48:20.687: %SYS-5-CONFIG_I: Configured from console by console
+Device2#</msg>
+<status status="PASS" endtime="20170110 15:57:36.754" starttime="20170110 15:55:16.219"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:57:36.754" starttime="20170110 15:55:16.219"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>route</arg>
+<arg>R3</arg>
+<arg>${R3_AS_id}</arg>
+<arg>${R2_lointerface}</arg>
+</arguments>
+<kw name="Route" library="IBGP">
+<arguments>
+<arg>R3</arg>
+<arg>${R3_AS_id}</arg>
+<arg>${R2_lointerface}</arg>
+</arguments>
+<msg timestamp="20170110 15:59:57.211" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#router bgp 2
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#neighbor 2.2.2.2 next-hop-self
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#end
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+*Mar  1 00:50:41.739: %SYS-5-CONFIG_I: Configured from console by console
+Device3#</msg>
+<status status="PASS" endtime="20170110 15:59:57.212" starttime="20170110 15:57:36.756"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:59:57.212" starttime="20170110 15:57:36.755"></status>
+</kw>
+<status status="PASS" endtime="20170110 15:59:57.213" starttime="20170110 15:55:16.218"></status>
+</kw>
+<kw name="Redistribute routes from OSPF into BGP" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Redistributing routes from OSPF into BGP</arg>
+</arguments>
+<status status="PASS" endtime="20170110 15:59:57.216" starttime="20170110 15:59:57.215"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>redistribution</arg>
+<arg>R2</arg>
+<arg>${R2_AS_id}</arg>
+<arg>${Process_id}</arg>
+</arguments>
+<kw name="Redistribution" library="IBGP">
+<arguments>
+<arg>R2</arg>
+<arg>${R2_AS_id}</arg>
+<arg>${Process_id}</arg>
+</arguments>
+<msg timestamp="20170110 16:02:17.763" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#router ospf 1
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#redistribute bgp 2 subnets
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#
+Device2(config-router)#end
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+*Mar  1 00:53:01.719: %SYS-5-CONFIG_I: Configured from console by console
+Device2#</msg>
+<status status="PASS" endtime="20170110 16:02:17.764" starttime="20170110 15:59:57.217"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:02:17.764" starttime="20170110 15:59:57.216"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>redistribution</arg>
+<arg>R3</arg>
+<arg>${R3_AS_id}</arg>
+<arg>${Process_id}</arg>
+</arguments>
+<kw name="Redistribution" library="IBGP">
+<arguments>
+<arg>R3</arg>
+<arg>${R3_AS_id}</arg>
+<arg>${Process_id}</arg>
+</arguments>
+<msg timestamp="20170110 16:04:38.294" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#router ospf 1
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#redistribute bgp 2 subnets
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#
+Device3(config-router)#end
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+*Mar  1 00:55:22.751: %SYS-5-CONFIG_I: Configured from console by console
+Device3#</msg>
+<status status="PASS" endtime="20170110 16:04:38.295" starttime="20170110 16:02:17.766"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:04:38.295" starttime="20170110 16:02:17.765"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:04:38.296" starttime="20170110 15:59:57.214"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:04:38.297" critical="yes" starttime="20170110 15:12:51.833"></status>
+</test>
+<test id="s1-t2" name="Validation_Phase">
+<kw name="Check if ip address is set and interface is up" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Checking if ip address is set and interface is up</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:04:38.301" starttime="20170110 16:04:38.300"></status>
+</kw>
+<kw type="for" name="${ELEMENT} IN [ @{Devices} ]">
+<kw type="foritem" name="${ELEMENT} = R1">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<msg timestamp="20170110 16:06:59.700" level="INFO">flag=3
+Connection established with R1
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            192.168.23.3    YES manual up                    up      
+FastEthernet0/1            192.168.34.3    YES manual up                    up      
+FastEthernet1/0            unassigned      YES unset  administratively down down    
+Loopback0                  3.3.3.3         YES manual up                    up      
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#</msg>
+<status status="PASS" endtime="20170110 16:06:59.700" starttime="20170110 16:04:38.303"></status>
+</kw>
+<msg timestamp="20170110 16:06:59.700" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:06:59.700" starttime="20170110 16:04:38.302"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Interfaces up in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:06:59.701" level="INFO">Interfaces up in R1</msg>
+<status status="PASS" endtime="20170110 16:06:59.701" starttime="20170110 16:06:59.701"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>ip address not set or interface not up in</arg>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:06:59.703" starttime="20170110 16:06:59.701"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:06:59.703" starttime="20170110 16:04:38.302"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R2">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<msg timestamp="20170110 16:09:20.107" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            192.168.23.2    YES manual up                    up      
+FastEthernet0/1            192.168.12.2    YES manual up                    up      
+FastEthernet1/0            unassigned      YES unset  administratively down down    
+Loopback0                  2.2.2.2         YES manual up                    up      
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#</msg>
+<status status="PASS" endtime="20170110 16:09:20.108" starttime="20170110 16:06:59.704"></status>
+</kw>
+<msg timestamp="20170110 16:09:20.108" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:09:20.108" starttime="20170110 16:06:59.703"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Interfaces up in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:09:20.110" level="INFO">Interfaces up in R2</msg>
+<status status="PASS" endtime="20170110 16:09:20.110" starttime="20170110 16:09:20.109"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>ip address not set or interface not up in</arg>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:09:20.115" starttime="20170110 16:09:20.111"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:09:20.115" starttime="20170110 16:06:59.703"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R3">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<msg timestamp="20170110 16:11:40.529" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            192.168.45.4    YES manual up                    up      
+FastEthernet0/1            192.168.34.4    YES manual up                    up      
+FastEthernet1/0            unassigned      YES unset  administratively down down    
+Loopback0                  4.4.4.4         YES manual up                    up      
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#</msg>
+<status status="PASS" endtime="20170110 16:11:40.530" starttime="20170110 16:09:20.117"></status>
+</kw>
+<msg timestamp="20170110 16:11:40.530" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:11:40.531" starttime="20170110 16:09:20.116"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Interfaces up in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:11:40.532" level="INFO">Interfaces up in R3</msg>
+<status status="PASS" endtime="20170110 16:11:40.533" starttime="20170110 16:11:40.531"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>ip address not set or interface not up in</arg>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:11:40.538" starttime="20170110 16:11:40.533"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:11:40.538" starttime="20170110 16:09:20.115"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R4">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<msg timestamp="20170110 16:14:00.904" level="INFO">flag=3
+Connection established with R4
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            192.168.12.1    YES manual up                    up      
+FastEthernet0/1            unassigned      YES unset  administratively down down    
+FastEthernet1/0            unassigned      YES unset  administratively down down    
+Loopback0                  1.1.1.1         YES manual up                    up      
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#</msg>
+<status status="PASS" endtime="20170110 16:14:00.905" starttime="20170110 16:11:40.541"></status>
+</kw>
+<msg timestamp="20170110 16:14:00.906" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:14:00.906" starttime="20170110 16:11:40.540"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Interfaces up in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:14:00.908" level="INFO">Interfaces up in R4</msg>
+<status status="PASS" endtime="20170110 16:14:00.908" starttime="20170110 16:14:00.907"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>ip address not set or interface not up in</arg>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:14:00.912" starttime="20170110 16:14:00.908"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:14:00.912" starttime="20170110 16:11:40.539"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R5">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip interface brief</arg>
+</arguments>
+<msg timestamp="20170110 16:16:21.363" level="INFO">flag=3
+Connection established with R5
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            192.168.45.5    YES manual up                    up      
+FastEthernet0/1            unassigned      YES unset  administratively down down    
+FastEthernet1/0            unassigned      YES unset  administratively down down    
+Loopback0                  5.5.5.5         YES manual up                    up      
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#</msg>
+<status status="PASS" endtime="20170110 16:16:21.364" starttime="20170110 16:14:00.914"></status>
+</kw>
+<msg timestamp="20170110 16:16:21.364" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:16:21.364" starttime="20170110 16:14:00.913"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Interfaces up in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:16:21.365" level="INFO">Interfaces up in R5</msg>
+<status status="PASS" endtime="20170110 16:16:21.365" starttime="20170110 16:16:21.364"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>ip address not set or interface not up in</arg>
+<arg>${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:16:21.367" starttime="20170110 16:16:21.365"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:16:21.367" starttime="20170110 16:14:00.912"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:16:21.367" starttime="20170110 16:04:38.301"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:16:21.367" starttime="20170110 16:04:38.299"></status>
+</kw>
+<kw name="Ensure that different autonomous systems can communicate with each other" library="Resource">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Autonomous system communication validated</arg>
+</arguments>
+<msg timestamp="20170110 16:16:21.369" level="INFO">Autonomous system communication validated</msg>
+<status status="PASS" endtime="20170110 16:16:21.369" starttime="20170110 16:16:21.369"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:16:21.370" starttime="20170110 16:16:21.368"></status>
+</kw>
+<kw name="Check if OSPF neighbors are established" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Checking if OSPF neighbors are established</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:16:21.372" starttime="20170110 16:16:21.371"></status>
+</kw>
+<kw type="for" name="${ELEMENT} IN [ @{Devices} ]">
+<kw type="foritem" name="${ELEMENT} = R1">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<msg timestamp="20170110 16:18:41.802" level="INFO">flag=3
+Connection established with R1
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+4.4.4.4           1   FULL/BDR        00:00:34    192.168.34.4    FastEthernet0/1
+2.2.2.2           1   FULL/BDR        00:00:37    192.168.23.2    FastEthernet0/0
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#</msg>
+<status status="PASS" endtime="20170110 16:18:41.804" starttime="20170110 16:16:21.373"></status>
+</kw>
+<msg timestamp="20170110 16:18:41.804" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:18:41.805" starttime="20170110 16:16:21.373"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>OSPF neighbors learnt in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:18:41.806" level="INFO">OSPF neighbors learnt in R1</msg>
+<status status="PASS" endtime="20170110 16:18:41.807" starttime="20170110 16:18:41.805"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>neighbor not established ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:18:41.809" starttime="20170110 16:18:41.807"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:18:41.809" starttime="20170110 16:16:21.372"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R2">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<msg timestamp="20170110 16:21:02.261" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+3.3.3.3           1   FULL/DR         00:00:31    192.168.23.3    FastEthernet0/0
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#</msg>
+<status status="PASS" endtime="20170110 16:21:02.262" starttime="20170110 16:18:41.811"></status>
+</kw>
+<msg timestamp="20170110 16:21:02.263" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:21:02.263" starttime="20170110 16:18:41.810"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>OSPF neighbors learnt in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:21:02.265" level="INFO">OSPF neighbors learnt in R2</msg>
+<status status="PASS" endtime="20170110 16:21:02.265" starttime="20170110 16:21:02.264"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>neighbor not established ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:21:02.269" starttime="20170110 16:21:02.265"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:21:02.269" starttime="20170110 16:18:41.810"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R3">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<msg timestamp="20170110 16:23:22.671" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+3.3.3.3           1   FULL/DR         00:00:31    192.168.34.3    FastEthernet0/1
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#</msg>
+<status status="PASS" endtime="20170110 16:23:22.672" starttime="20170110 16:21:02.270"></status>
+</kw>
+<msg timestamp="20170110 16:23:22.673" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:23:22.673" starttime="20170110 16:21:02.269"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>OSPF neighbors learnt in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:23:22.675" level="INFO">OSPF neighbors learnt in R3</msg>
+<status status="PASS" endtime="20170110 16:23:22.675" starttime="20170110 16:23:22.674"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>neighbor not established ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:23:22.679" starttime="20170110 16:23:22.675"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:23:22.679" starttime="20170110 16:21:02.269"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R4">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<msg timestamp="20170110 16:25:43.064" level="INFO">flag=3
+Connection established with R4
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#show ip ospf neighbor
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#</msg>
+<status status="PASS" endtime="20170110 16:25:43.064" starttime="20170110 16:23:22.680"></status>
+</kw>
+<msg timestamp="20170110 16:25:43.064" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:25:43.064" starttime="20170110 16:23:22.680"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>OSPF neighbors learnt in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:25:43.065" level="INFO">OSPF neighbors learnt in R4</msg>
+<status status="PASS" endtime="20170110 16:25:43.065" starttime="20170110 16:25:43.065"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>neighbor not established ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:25:43.066" starttime="20170110 16:25:43.065"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:25:43.066" starttime="20170110 16:23:22.679"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R5">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip ospf neighbor</arg>
+</arguments>
+<msg timestamp="20170110 16:28:03.477" level="INFO">flag=3
+Connection established with R5
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#show ip ospf neighbor
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#</msg>
+<status status="PASS" endtime="20170110 16:28:03.478" starttime="20170110 16:25:43.067"></status>
+</kw>
+<msg timestamp="20170110 16:28:03.478" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:28:03.478" starttime="20170110 16:25:43.067"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>OSPF neighbors learnt in ${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20170110 16:28:03.480" level="INFO">OSPF neighbors learnt in R5</msg>
+<status status="PASS" endtime="20170110 16:28:03.480" starttime="20170110 16:28:03.479"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>neighbor not established ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:28:03.484" starttime="20170110 16:28:03.481"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:28:03.484" starttime="20170110 16:25:43.066"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:28:03.484" starttime="20170110 16:16:21.372"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:28:03.485" starttime="20170110 16:16:21.370"></status>
+</kw>
+<kw name="Check if all routes are learnt by devices" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Checking if all routes are learnt by devices</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:28:03.487" starttime="20170110 16:28:03.487"></status>
+</kw>
+<kw type="for" name="${ELEMENT} IN [ @{Devices} ]">
+<kw type="foritem" name="${ELEMENT} = R1">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<msg timestamp="20170110 16:30:23.916" level="INFO">flag=3
+Connection established with R1
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#show ip bgp
+% BGP not active
+
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#</msg>
+<status status="PASS" endtime="20170110 16:30:23.916" starttime="20170110 16:28:03.489"></status>
+</kw>
+<msg timestamp="20170110 16:30:23.917" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:30:23.917" starttime="20170110 16:28:03.489"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Routes learnt by ${Element}</arg>
+</arguments>
+<msg timestamp="20170110 16:30:23.918" level="INFO">Routes learnt by R1</msg>
+<status status="PASS" endtime="20170110 16:30:23.918" starttime="20170110 16:30:23.917"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>routes not learnt ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:30:23.920" starttime="20170110 16:30:23.918"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:30:23.920" starttime="20170110 16:28:03.488"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R2">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<msg timestamp="20170110 16:32:44.325" level="INFO">flag=3
+Connection established with R2
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#show ip bgp
+
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#</msg>
+<status status="PASS" endtime="20170110 16:32:44.325" starttime="20170110 16:30:23.921"></status>
+</kw>
+<msg timestamp="20170110 16:32:44.325" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:32:44.325" starttime="20170110 16:30:23.921"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Routes learnt by ${Element}</arg>
+</arguments>
+<msg timestamp="20170110 16:32:44.326" level="INFO">Routes learnt by R2</msg>
+<status status="PASS" endtime="20170110 16:32:44.326" starttime="20170110 16:32:44.325"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>routes not learnt ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:32:44.327" starttime="20170110 16:32:44.326"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:32:44.327" starttime="20170110 16:30:23.920"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R3">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<msg timestamp="20170110 16:35:04.743" level="INFO">flag=3
+Connection established with R3
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#show ip bgp
+
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#</msg>
+<status status="PASS" endtime="20170110 16:35:04.743" starttime="20170110 16:32:44.327"></status>
+</kw>
+<msg timestamp="20170110 16:35:04.744" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:35:04.744" starttime="20170110 16:32:44.327"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Routes learnt by ${Element}</arg>
+</arguments>
+<msg timestamp="20170110 16:35:04.745" level="INFO">Routes learnt by R3</msg>
+<status status="PASS" endtime="20170110 16:35:04.745" starttime="20170110 16:35:04.744"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>routes not learnt ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:35:04.747" starttime="20170110 16:35:04.745"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:35:04.748" starttime="20170110 16:32:44.327"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R4">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<msg timestamp="20170110 16:37:25.124" level="INFO">flag=3
+Connection established with R4
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#show ip bgp
+
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#</msg>
+<status status="PASS" endtime="20170110 16:37:25.124" starttime="20170110 16:35:04.749"></status>
+</kw>
+<msg timestamp="20170110 16:37:25.125" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:37:25.125" starttime="20170110 16:35:04.748"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Routes learnt by ${Element}</arg>
+</arguments>
+<msg timestamp="20170110 16:37:25.127" level="INFO">Routes learnt by R4</msg>
+<status status="PASS" endtime="20170110 16:37:25.127" starttime="20170110 16:37:25.126"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>routes not learnt ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:37:25.131" starttime="20170110 16:37:25.128"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:37:25.131" starttime="20170110 16:35:04.748"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = R5">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>checking_operabilty</arg>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Checking Operabilty" library="operational_ph">
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>show ip bgp</arg>
+</arguments>
+<msg timestamp="20170110 16:39:45.602" level="INFO">flag=3
+Connection established with R5
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#show ip bgp
+
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#</msg>
+<status status="PASS" endtime="20170110 16:39:45.602" starttime="20170110 16:37:25.133"></status>
+</kw>
+<msg timestamp="20170110 16:39:45.603" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20170110 16:39:45.603" starttime="20170110 16:37:25.132"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Routes learnt by ${Element}</arg>
+</arguments>
+<msg timestamp="20170110 16:39:45.604" level="INFO">Routes learnt by R5</msg>
+<status status="PASS" endtime="20170110 16:39:45.604" starttime="20170110 16:39:45.603"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>FAIL</arg>
+<arg>routes not learnt ${ELEMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.606" starttime="20170110 16:39:45.604"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.606" starttime="20170110 16:37:25.131"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.606" starttime="20170110 16:28:03.488"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.606" starttime="20170110 16:28:03.486"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.606" critical="yes" starttime="20170110 16:04:38.298"></status>
+</test>
+<test id="s1-t3" name="Sustenance_Phase">
+<kw name="Track the scale on eBGP peers" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Tracking the scale on eBGP peers</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.608" starttime="20170110 16:39:45.608"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.608" starttime="20170110 16:39:45.607"></status>
+</kw>
+<kw name="Track the scale on iBGP peers" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Tracking the scale on iBGP peers</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.609" starttime="20170110 16:39:45.609"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.610" starttime="20170110 16:39:45.609"></status>
+</kw>
+<kw name="Verify the number of routes the DUT is able to receive" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Verifying the number of routes the DUT is able to receive</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.611" starttime="20170110 16:39:45.610"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.611" starttime="20170110 16:39:45.610"></status>
+</kw>
+<kw name="Verify the number of routes the DUT is able to announce to a single iBGP neighbor" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Verifying the number of routes the DUT is able to announce</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.612" starttime="20170110 16:39:45.611"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.612" starttime="20170110 16:39:45.611"></status>
+</kw>
+<kw name="Evaluate peering convergence speed" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Evaluating peering convergence speed</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.615" starttime="20170110 16:39:45.614"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.615" starttime="20170110 16:39:45.613"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:39:45.615" critical="yes" starttime="20170110 16:39:45.607"></status>
+</test>
+<kw type="teardown" name="Teardown Actions" library="Resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Teardown Actions done here</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.617" starttime="20170110 16:39:45.617"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Unconfiguring IP_Address</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:39:45.617" starttime="20170110 16:39:45.617"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R1</arg>
+<arg>${Links_of_R1}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R1</arg>
+<arg>${Links_of_R1}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<msg timestamp="20170110 16:43:10.908" level="INFO">flag=3
+Connection established with R1
+flag=1
+ 
+Device1# 
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#
+Device1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#
+Device1(config)#interface f0/0
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#no ip address 192.168.23.3  255.255.255.0 
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#shutdown
+Device1(config-if)#shutdown 
+Device1(config-if)#shutdown 
+Device1(config-if)#shutdown 
+Device1(config-if)#shutdown 
+Device1(config-if)#shutdown 
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#
+Device1(config-if)#</msg>
+<status status="PASS" endtime="20170110 16:43:10.908" starttime="20170110 16:39:45.618"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:43:10.908" starttime="20170110 16:39:45.618"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address unconfigured in R1</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:43:10.909" starttime="20170110 16:43:10.908"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R2</arg>
+<arg>${Links_of_R2}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R2</arg>
+<arg>${Links_of_R2}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<msg timestamp="20170110 16:46:36.508" level="INFO">flag=3
+Connection established with R2
+flag=1
+
+*Mar  1 01:35:26.215: %BGP-5-ADJCHANGE: neighbor 4.4.4.4 Down BGP Notification sent
+Device2#
+*Mar  1 01:35:26.215: %BGP-3-NOTIFICATION: sent to neighbor 4.4.4.4 4/0 (hold time expired) 0 bytes 
+Device2# 
+Device2# 
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#
+Device2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#
+Device2(config)#interface f0/0
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#no ip address 192.168.23.2  255.255.255.0 
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#shutdown
+Device2(config-if)#shutdown 
+Device2(config-if)#shutdown 
+Device2(config-if)#shutdown 
+Device2(config-if)#shutdown 
+Device2(config-if)#shutdown 
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#
+Device2(config-if)#</msg>
+<status status="PASS" endtime="20170110 16:46:36.508" starttime="20170110 16:43:10.909"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:46:36.508" starttime="20170110 16:43:10.909"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address unconfigured in R2</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:46:36.509" starttime="20170110 16:46:36.509"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R3</arg>
+<arg>${Links_of_R3}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R3</arg>
+<arg>${Links_of_R3}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<msg timestamp="20170110 16:50:02.152" level="INFO">flag=3
+Connection established with R3
+flag=1
+ 
+Device3# 
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#
+Device3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#
+Device3(config)#interface f0/1
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#no ip address 192.168.34.4  255.255.255.0 
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#shutdown
+Device3(config-if)#shutdown 
+Device3(config-if)#shutdown 
+Device3(config-if)#shutdown 
+Device3(config-if)#shutdown 
+Device3(config-if)#shutdown 
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#
+Device3(config-if)#</msg>
+<status status="PASS" endtime="20170110 16:50:02.152" starttime="20170110 16:46:36.510"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:50:02.152" starttime="20170110 16:46:36.509"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address unconfigured in R3</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:50:02.153" starttime="20170110 16:50:02.153"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R4</arg>
+<arg>${Links_of_R4}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R4</arg>
+<arg>${Links_of_R4}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<msg timestamp="20170110 16:51:19.153" level="INFO">flag=3
+Connection established with R4
+flag=1
+ 
+Device4# 
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#
+Device4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#
+Device4(config)#interface f0/0
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#no ip address 192.168.12.1  255.255.255.0 
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#shutdown
+Device4(config-if)#shutdown 
+Device4(config-if)#shutdown 
+Device4(config-if)#shutdown 
+Device4(config-if)#shutdown 
+Device4(config-if)#shutdown 
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#
+Device4(config-if)#</msg>
+<status status="PASS" endtime="20170110 16:51:19.154" starttime="20170110 16:50:02.153"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:51:19.154" starttime="20170110 16:50:02.153"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address unconfigured in R4</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:51:19.154" starttime="20170110 16:51:19.154"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>set_IP</arg>
+<arg>R5</arg>
+<arg>${Links_of_R5}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<kw name="Set IP" library="Devices">
+<arguments>
+<arg>R5</arg>
+<arg>${Links_of_R5}</arg>
+<arg>unconfigure</arg>
+</arguments>
+<msg timestamp="20170110 16:52:36.161" level="INFO">flag=3
+Connection established with R5
+flag=1
+ 
+Device5# 
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#
+Device5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#
+Device5(config)#interface f0/0
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#no ip address 192.168.45.5  255.255.255.0 
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#shutdown
+Device5(config-if)#shutdown 
+Device5(config-if)#shutdown 
+Device5(config-if)#shutdown 
+Device5(config-if)#shutdown 
+Device5(config-if)#shutdown 
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#
+Device5(config-if)#</msg>
+<status status="PASS" endtime="20170110 16:52:36.161" starttime="20170110 16:51:19.155"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:52:36.162" starttime="20170110 16:51:19.154"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>IP_Address unconfigured in R5</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:52:36.162" starttime="20170110 16:52:36.162"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Disabling password and unsetting hostname</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:52:36.163" starttime="20170110 16:52:36.163"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>connect_all</arg>
+<arg>disable</arg>
+</arguments>
+<kw name="Connect All" library="setup_actions">
+<arguments>
+<arg>disable</arg>
+</arguments>
+<status status="PASS" endtime="20170110 16:59:18.523" starttime="20170110 16:52:36.163"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:59:18.523" starttime="20170110 16:52:36.163"></status>
+</kw>
+<status status="PASS" endtime="20170110 16:59:18.524" starttime="20170110 16:39:45.616"></status>
+</kw>
+<doc>A test suite with tests for configuring BGP.
+Topology:-
+____________________________
+| R1 AS2 |
+| /  |
+| /  |
+| R2 R3 |
+|_________|________|_________|
+| |
+______|__ ___|______
+| AS1| | AS3|
+| R4 | | R5 |
+|_________| |__________|
+Testplan Goals:-
+1. Configure IP addresses as per the topology.
+2. Each Router should have a loopback0 interface.
+3. Configure OSPF within AS2 to advertise the loopback0 interfaces.
+Don't advertise or run OSPF on the links interconnecting AS1 and AS3.
+4. Configure IBGP between R2 and R3. Source the BGP updates from the loopback0 interfaces.
+5. Enable BGP synchronisation.
+6. Configure EBGP between R2 and R4.
+7. Configure EBGP between R3 and R5.
+8. Advertise the loopback0 interfaces on R4 and R5.
+9. Ensure AS1 and AS3 can communicate with each other without removing the BGP synchronisation command.</doc>
+<metadata>
+<item name="Version">1.0
+More Info For more information about Robot Framework see http://robotframework.org
+Author Payal Jain
+Date 19 Dec 2016
+Executed At ${HOST}
+Test Framework Robot Framework Python</item>
+</metadata>
+<status status="PASS" endtime="20170110 16:59:18.524" starttime="20170110 15:10:20.573"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="BGP" pass="3">BGP</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
